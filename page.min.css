@@ -35,7 +35,7 @@ nav.primary a{transition:background .15s,color .15s;white-space:nowrap}
 nav.primary a.active{color:var(--signal);font-weight:600}
 .bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
 .brand{display:flex;align-items:center;text-decoration:none}
-.logo{display:block;aspect-ratio:556/144;height:46px;background:url("https://afifshaqir.ozem.my/storage/tenants/afifshaqir/tmnxera/assets/tmnxera-logo.svg?v=60eb64a2") center/contain no-repeat}
+.logo{display:block;aspect-ratio:556/144;height:46px;background:url("https://ozem.my/storage/tenants/63fccb60-133b-4d69-b999-45301a038800/tmnxera/assets/tmnxera-logo.svg?v=60eb64a2") center/contain no-repeat}
 @media (max-width:420px){header.site .logo{height:38px}
 }
 footer .logo{height:30px}
@@ -458,7 +458,7 @@ a{color:var(--accent)}
 header.site{background:var(--lit-255-255-255-p94);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
 header.site.scrolled{border-bottom-color:var(--hair);box-shadow:0 6px 24px var(--lit-11-20-38-p06)}
 .bar{height:var(--header-h);gap:28px}
-.logo{height:54px;background-image:url("https://afifshaqir.ozem.my/storage/tenants/afifshaqir/tmnxera/assets/tmnxera-logo-v2.svg?v=3474189a")}
+.logo{height:54px;background-image:url("https://ozem.my/storage/tenants/63fccb60-133b-4d69-b999-45301a038800/tmnxera/assets/tmnxera-logo-v2.svg?v=3474189a")}
 @media (max-width: 420px){header.site .logo{height:44px}
 }
 nav.primary ul{position:relative;gap:2px}
