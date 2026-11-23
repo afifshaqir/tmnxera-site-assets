@@ -938,3 +938,75 @@ to{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){.hero h1 .wi{transform:none}
 }
 .hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+:root{--bp-ink:#0A1F44;--bp-ink-2:#14336E;--bp-line:#BFE3FF;--bp-panel:#5BE08A;--bp-scan:#8FF5D2}
+.hero .bp{position:absolute;inset:0;pointer-events:none;transform-origin:58% 52%;transform:scale(1.02);animation:hd-drift 48s ease-in-out infinite alternate}
+.hero.is-paused .bp{animation-play-state:paused}
+.bp-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 62% 38%,var(--bp-ink-2),var(--bp-ink) 72%)}
+.bp-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.bp-svg *{vector-effect:non-scaling-stroke}
+.bp-grid{opacity:0}
+.bp-grid line{stroke:var(--bp-line);stroke-opacity:.13;stroke-width:1}
+.bp-grid line.major{stroke-opacity:.24}
+.bp-lines path{fill:none;stroke:var(--bp-line);stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.bp-lines path.thin{stroke-width:1;stroke-opacity:.75}
+.bp-lines path.roof{stroke-width:1;stroke-opacity:.5}
+.bp-lines path.dash{stroke-width:1;stroke-opacity:.6;stroke-dasharray:10 8;stroke-dashoffset:0;opacity:0}
+.bp-detail line{stroke:var(--bp-line);stroke-width:.8;stroke-opacity:.55;opacity:0}
+#bp-hatch line{stroke:var(--bp-line);stroke-width:.8;stroke-opacity:.45}
+.bp-hatchfill{opacity:0}
+.bp-panels polygon{fill:var(--bp-panel);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.3)}
+.bp-trees circle{fill:none;stroke:var(--bp-line);stroke-width:.9;stroke-opacity:.7;opacity:0}
+.bp-trees path{fill:none;stroke:var(--bp-line);stroke-width:.9;stroke-opacity:.6;opacity:0}
+.bp-labels{opacity:0}
+.bp-labels text{fill:var(--bp-line);font:600 8.5px/1 "Inter Tight",system-ui,sans-serif;letter-spacing:.18em}
+.bp-labels .lead{fill:none;stroke:var(--bp-line);stroke-width:.8;stroke-opacity:.7}
+.bp-tags .tag{opacity:0;transform-box:fill-box;transform-origin:0 100%}
+.bp-tags .dot{fill:var(--bp-scan)}
+.bp-tags .ring{fill:none;stroke:var(--bp-scan);stroke-width:1;opacity:0;transform-box:fill-box;transform-origin:center}
+.bp-tags .stem{stroke:var(--bp-scan);stroke-width:.9;stroke-opacity:.8}
+.bp-tags rect{fill:rgb(10 31 68 / .88);stroke:var(--bp-scan);stroke-width:.9}
+.bp-tags text{fill:#fff;font:700 8.5px/1 "Inter Tight",system-ui,sans-serif;letter-spacing:.12em}
+.bp-tags text .k{fill:var(--bp-scan);font-weight:600}
+.bp.run .bp-grid{animation:bp-in .8s ease-out forwards}
+.bp.run .bp-lines path{animation:bp-draw 1.1s cubic-bezier(.65,0,.35,1) forwards;animation-delay:calc(.4s + var(--d) * .17s)}
+.bp.run .bp-lines path.dash{animation:bp-in .6s ease-out forwards;animation-delay:.9s}
+.bp.run .bp-detail line{animation:bp-in .35s ease-out forwards;animation-delay:calc(1.6s + var(--i) * 4ms)}
+.bp.run .bp-hatchfill{animation:bp-in .6s ease-out 2.3s forwards}
+.bp.run .bp-panels polygon{animation:bp-pop .4s cubic-bezier(.2,.8,.3,1.3) forwards;animation-delay:calc(2.4s + var(--i) * 7ms)}
+.bp.run .bp-trees circle,.bp.run .bp-trees path{animation:bp-in .4s ease-out forwards;animation-delay:calc(2.5s + var(--i) * 12ms)}
+.bp.run .bp-labels{animation:bp-in .5s ease-out 2.9s forwards}
+.bp.run .bp-tags .tag{animation:bp-tag .45s cubic-bezier(.2,.8,.3,1.2) forwards;animation-delay:calc(3s + var(--t) * .2s)}
+.bp.run .bp-tags .ring{animation:bp-ring 1.4s ease-out 2;animation-delay:calc(3.2s + var(--t) * .2s)}
+.bp.run .bp-bg{animation:bp-out 1.2s ease-in-out 4.6s forwards}
+.bp.run .bp-svg{animation:bp-out 1.3s ease-in-out 5.1s forwards}
+.bp.run .bp-stamp{animation:bp-in .6s ease-out 3s forwards,bp-out 1.3s ease-in-out 5.1s forwards}
+.bp.done{display:none}
+.hero .bp:not(.run):not(.done){animation:hd-drift 48s ease-in-out infinite alternate,bp-gone 0s linear 2.5s forwards}
+@keyframes bp-gone{to{visibility:hidden}
+}
+.bp-stamp{position:absolute;right:24px;bottom:28px;display:flex;gap:10px;align-items:center;padding:10px 14px;border:1px solid rgb(191 227 255 / .6);color:var(--bp-line);font:600 10px/1.45 "Inter Tight",system-ui,sans-serif;letter-spacing:.14em;opacity:0}
+.bp-stamp div{display:grid}
+.bp-stamp strong{font-size:11px;letter-spacing:.24em}
+.bp-stamp span{opacity:.85}
+.bp-stamp svg{width:28px;height:28px;overflow:visible}
+.bp-stamp circle{fill:none;stroke:var(--bp-line);stroke-width:1}
+.bp-stamp path{fill:var(--bp-line)}
+.bp-stamp text{fill:var(--bp-line);font-size:7px}
+@media (max-width:760px){.bp-stamp,.bp-tags{display:none}
+}
+@keyframes bp-draw{to{stroke-dashoffset:0}
+}
+@keyframes bp-in{to{opacity:1}
+}
+@keyframes bp-pop{to{opacity:.8;transform:scale(1)}
+}
+@keyframes bp-out{to{opacity:0}
+}
+@keyframes bp-tag{from{opacity:0;transform:translateY(6px) scale(.9)}
+to{opacity:1;transform:none}
+}
+@keyframes bp-ring{from{opacity:.9;transform:scale(1)}
+to{opacity:0;transform:scale(3.2)}
+}
+@media (prefers-reduced-motion:reduce){.hero .bp{display:none}
+}
