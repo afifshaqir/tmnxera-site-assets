@@ -35,7 +35,7 @@ nav.primary a{transition:background .15s,color .15s;white-space:nowrap}
 nav.primary a.active{color:var(--signal);font-weight:600}
 .bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
 .brand{display:flex;align-items:center;text-decoration:none}
-.logo{display:block;aspect-ratio:556/144;height:46px;background:url("https://ozem.my/storage/tenants/63fccb60-133b-4d69-b999-45301a038800/tmnxera/assets/tmnxera-logo.svg?v=60eb64a2") center/contain no-repeat}
+.logo{display:block;aspect-ratio:556/144;height:46px;background:url("https://ozem.my/storage/tenants/63fccb60-133b-4d69-b999-45301a038800/tmnxera/assets/tmnxera-logo.svg?v=6f6a7a6b") center/contain no-repeat}
 @media (max-width:420px){header.site .logo{height:38px}
 }
 footer .logo{height:30px}
@@ -458,7 +458,7 @@ a{color:var(--accent)}
 header.site{background:var(--lit-255-255-255-p94);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid transparent;transition:box-shadow .3s,border-color .3s}
 header.site.scrolled{border-bottom-color:var(--hair);box-shadow:0 6px 24px var(--lit-11-20-38-p06)}
 .bar{height:var(--header-h);gap:28px}
-.logo{height:54px;background-image:url("https://ozem.my/storage/tenants/63fccb60-133b-4d69-b999-45301a038800/tmnxera/assets/tmnxera-logo-v2.svg?v=3474189a")}
+.logo{height:54px;background-image:url("https://ozem.my/storage/tenants/63fccb60-133b-4d69-b999-45301a038800/tmnxera/assets/tmnxera-logo-v2.svg?v=9864a955")}
 @media (max-width: 420px){header.site .logo{height:44px}
 }
 nav.primary ul{position:relative;gap:2px}
@@ -771,7 +771,7 @@ button:disabled,.btn[aria-disabled="true"],input:disabled,select:disabled,textar
 html.pf-lock{overflow:clip}
 .pf-sheet{width:min(560px,100%)}
 .hero{background:var(--hero-base);color:var(--on-photo);min-height:max(640px,calc(100svh - var(--header-h)));align-items:flex-end;isolation:isolate}
-.hero .still{object-position:50% 54%;transform-origin:58% 52%;transform:scale(1.02);animation:hd-drift 48s ease-in-out infinite alternate;will-change:transform}
+.hero .still{object-position:50% 50%;transform-origin:50% 50%;transform:scale(1.02);animation:hd-drift 48s ease-in-out infinite alternate;will-change:transform}
 @keyframes hd-drift{from{transform:scale(1.02) translate3d(0,0,0)}
 to{transform:scale(1.09) translate3d(-2%,-1.2%,0)}
 }
@@ -808,22 +808,21 @@ to{transform:scale(1.09) translate3d(-2%,-1.2%,0)}
 .hero-specs div:nth-child(n+3){border-top-color:var(--on-photo-line)}
 .fly-ui .cap{display:inline}
 }
-.cg-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,15vw,230px);gap:16px;grid-template-areas:"a a b b" "a a c d" "e e f f"}
+.cg-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(150px,15vw,230px);gap:16px;grid-template-areas:"a a b b" "a a c d" "e e e e"}
 .cg-a{grid-area:a}
 .cg-b{grid-area:b}
 .cg-c{grid-area:c}
 .cg-d{grid-area:d}
 .cg-e{grid-area:e}
-.cg-f{grid-area:f}
 .cg-open{position:relative;display:block;width:100%;height:100%;padding:0;border:0;border-radius:var(--radius-m);overflow:hidden;background:var(--hero-base);cursor:zoom-in;color:var(--on-photo);font:inherit;text-align:left;box-shadow:var(--shadow);transition:box-shadow .3s,transform .3s cubic-bezier(.2,.8,.2,1)}
 .cg-open img{display:block;width:100%;height:100%;object-fit:cover}
 .cg-open:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
 .cg-open:active{transform:translateY(0)}
 .cg-open:focus-visible{outline-offset:3px}
 .cg-cap{position:absolute;left:0;right:0;bottom:0;padding:48px 18px 14px;font-weight:600;font-size:.95rem;background:linear-gradient(0deg,var(--gallery-shade),rgb(var(--photo-ink) / 0))}
-@media (max-width: 860px){.cg-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:170px;grid-template-areas:"a a" "a a" "b b" "c d" "e f"}
+@media (max-width: 860px){.cg-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:170px;grid-template-areas:"a a" "a a" "b b" "c d" "e e"}
 }
-@media (max-width: 480px){.cg-grid{grid-template-columns:minmax(0,1fr);grid-auto-rows:200px;grid-template-areas:"a" "b" "c" "d" "e" "f"}
+@media (max-width: 480px){.cg-grid{grid-template-columns:minmax(0,1fr);grid-auto-rows:200px;grid-template-areas:"a" "b" "c" "d" "e"}
 }
 .photo-band,.visit-photo{margin:0}
 .photo-band{margin-bottom:clamp(32px,4vw,48px)}
