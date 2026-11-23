@@ -1010,3 +1010,4 @@ to{opacity:0;transform:scale(3.2)}
 }
 @media (prefers-reduced-motion:reduce){.hero .bp{display:none}
 }
+.bp.run ~ .wrap h1 .wi{animation-delay:calc(var(--li,0) * 150ms + var(--wk,0) * 50ms + 4.7s)}
